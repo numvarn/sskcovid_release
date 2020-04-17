@@ -74,7 +74,6 @@ class _CheckinPageState extends State<CheckinPage> {
 
   @override
   Widget build(BuildContext context) {
-
     if (userLocation == null) {
       _getLocation().then((value) {
         setState(() {
@@ -150,7 +149,6 @@ class _CheckinPageState extends State<CheckinPage> {
       final resJson = json.decode(body);
 
       if (resJson['checkedin'] == 'successed') {
-        print(body);
         pr.hide();
         _showAlertCheckinSuccessed(context);
       } else {
